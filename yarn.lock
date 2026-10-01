@@ -2409,6 +2409,11 @@ forwarded@0.2.0:
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.2.0.tgz#2269936428aad4c15c7ebe9779a84bf0b2a81811"
   integrity sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==
 
+free-use-bible-api@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/free-use-bible-api/-/free-use-bible-api-0.4.0.tgz#c616f2673af44da0a89798f75c4f5dd3b933e4ba"
+  integrity sha512-IW/o9XL76pZn3wjdshKBnK8wMEeMSS3V7pqA8tXdW2h+pg9i4CLUmpZROoDBQn9tmXdRu36JVvyRNjsHT+liqA==
+
 fresh@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-2.0.0.tgz#8dd7df6a1b3a1b3a5cf186c05a5dd267622635a4"
