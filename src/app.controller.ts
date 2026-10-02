@@ -1,5 +1,4 @@
 import { Controller, Get } from '@nestjs/common';
-import type { ApiAvailableTranslations } from 'free-use-bible-api';
 import { AppService } from './app.service';
 
 @Controller()

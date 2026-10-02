@@ -1,0 +1,70 @@
+{
+  "translations": [
+    {
+      "id": "BSB",
+      "name": "Berean Standard Bible",
+      "website": "https://berean.bible/",
+      "licenseUrl": "https://berean.bible/",
+      "shortName": "BSB",
+      "englishName": "Berean Standard Bible",
+      "language": "eng",
+      "textDirection": "ltr",
+      "sha256": "6cc5238e442b4204b0f617cc5c932bc04f3bae4a0658e6393b0e319653ebe37f",
+      "availableFormats": [
+        "json"
+      ],
+      "listOfBooksApiLink": "/api/BSB/books.json",
+      "completeTranslationApiLink": "/api/BSB/complete.json",
+      "simpleCompleteTranslationApiLink": "/api/BSB/complete.simple.json",
+      "numberOfBooks": 66,
+      "totalNumberOfChapters": 1189,
+      "totalNumberOfVerses": 31086,
+      "languageName": "English",
+      "languageEnglishName": "English"
+    },
+    {
+      "id": "spa_pdt",
+      "name": "Palabra de Dios para ti",
+      "website": "https://ebible.org/Scriptures/details.php?id=spapddpt",
+      "licenseUrl": "https://ebible.org/Scriptures/details.php?id=spapddpt",
+      "shortName": "PDT",
+      "englishName": "Spanish Bible (God's Word for You)",
+      "language": "spa",
+      "textDirection": "ltr",
+      "sha256": "2d4ef9e30afcdb5916f853bda683685eee7c4ff114e3638a680ce201e1904fb2",
+      "availableFormats": [
+        "json"
+      ],
+      "listOfBooksApiLink": "/api/spa_pdt/books.json",
+      "completeTranslationApiLink": "/api/spa_pdt/complete.json",
+      "simpleCompleteTranslationApiLink": "/api/spa_pdt/complete.simple.json",
+      "numberOfBooks": 66,
+      "totalNumberOfChapters": 1189,
+      "totalNumberOfVerses": 31081,
+      "languageName": "español",
+      "languageEnglishName": "Spanish"
+    },
+    {
+      "id": "spa_r09",
+      "name": "Santa Biblia — Reina Valera 1909",
+      "website": "https://ebible.org/Scriptures/details.php?id=spaRV1909",
+      "licenseUrl": "https://ebible.org/Scriptures/details.php?id=spaRV1909",
+      "shortName": "R09",
+      "englishName": "Reina Valera 1909",
+      "language": "spa",
+      "textDirection": "ltr",
+      "sha256": "94e154b2e6e56eda1702d9e9f664357a5f2aa82634b551111b0b698d124e97d5",
+      "availableFormats": [
+        "json"
+      ],
+      "listOfBooksApiLink": "/api/spa_r09/books.json",
+      "completeTranslationApiLink": "/api/spa_r09/complete.json",
+      "simpleCompleteTranslationApiLink": "/api/spa_r09/complete.simple.json",
+      "numberOfBooks": 66,
+      "totalNumberOfChapters": 1189,
+      "totalNumberOfVerses": 31102,
+      "languageName": "español",
+      "languageEnglishName": "Spanish"
+    }
+  ]
+}

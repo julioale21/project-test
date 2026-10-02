@@ -1,0 +1,100 @@
+{
+  "translation": {
+    "id": "spa_r09",
+    "name": "Santa Biblia — Reina Valera 1909",
+    "website": "https://ebible.org/Scriptures/details.php?id=spaRV1909",
+    "licenseUrl": "https://ebible.org/Scriptures/details.php?id=spaRV1909",
+    "shortName": "R09",
+    "englishName": "Reina Valera 1909",
+    "language": "spa",
+    "textDirection": "ltr",
+    "sha256": "94e154b2e6e56eda1702d9e9f664357a5f2aa82634b551111b0b698d124e97d5",
+    "availableFormats": [
+      "json"
+    ],
+    "listOfBooksApiLink": "/api/spa_r09/books.json",
+    "completeTranslationApiLink": "/api/spa_r09/complete.json",
+    "simpleCompleteTranslationApiLink": "/api/spa_r09/complete.simple.json",
+    "numberOfBooks": 66,
+    "totalNumberOfChapters": 1189,
+    "totalNumberOfVerses": 31102,
+    "languageName": "español",
+    "languageEnglishName": "Spanish"
+  },
+  "book": {
+    "id": "GEN",
+    "translationId": "spa_r09",
+    "name": "Génesis",
+    "commonName": "Génesis",
+    "title": "Génesis",
+    "order": 1,
+    "numberOfChapters": 50,
+    "sha256": "50aad366050b7562f76e865ca1ea68290e1538ee57267abcf92eb92a6d6b5fb6",
+    "firstChapterNumber": 1,
+    "firstChapterApiLink": "/api/spa_r09/GEN/1.json",
+    "firstChapterReference": {
+      "translationId": "spa_r09",
+      "book": "GEN",
+      "chapter": 1
+    },
+    "lastChapterNumber": 50,
+    "lastChapterApiLink": "/api/spa_r09/GEN/50.json",
+    "lastChapterReference": {
+      "translationId": "spa_r09",
+      "book": "GEN",
+      "chapter": 50
+    },
+    "totalNumberOfVerses": 1533
+  },
+  "chapter": {
+    "number": 1,
+    "content": [
+      {
+        "type": "verse",
+        "number": 1,
+        "content": [
+          "EN el principio crió Dios los cielos y la tierra."
+        ]
+      },
+      {
+        "type": "verse",
+        "number": 2,
+        "content": [
+          "Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la haz del abismo, y el Espíritu de Dios se movía sobre la haz de las aguas."
+        ]
+      },
+      {
+        "type": "verse",
+        "number": 3,
+        "content": [
+          "Y dijo Dios: Sea la luz: y fué la luz."
+        ]
+      }
+    ],
+    "footnotes": []
+  },
+  "thisChapterLink": "/api/spa_r09/GEN/1.json",
+  "thisChapterReference": {
+    "translationId": "spa_r09",
+    "book": "GEN",
+    "chapter": 1
+  },
+  "thisChapterAudioLinks": {},
+  "nextChapterApiLink": "/api/spa_r09/GEN/2.json",
+  "nextChapterReference": {
+    "translationId": "spa_r09",
+    "book": "GEN",
+    "chapter": 2
+  },
+  "nextChapterAudioLinks": {},
+  "previousChapterApiLink": null,
+  "previousChapterReference": null,
+  "previousChapterAudioLinks": null,
+  "thisChapterAudioTimings": {},
+  "nextChapterAudioTimings": {},
+  "previousChapterAudioTimings": null,
+  "numberOfVerses": 31,
+  "simpleChapterApiLink": "/api/spa_r09/GEN/1.simple.json",
+  "thisChapterWordsLink": "/api/spa_r09/GEN/1.words.json",
+  "nextChapterWordsLink": "/api/spa_r09/GEN/2.words.json"
+}

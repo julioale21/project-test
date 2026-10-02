@@ -1,0 +1,101 @@
+{
+  "translation": {
+    "id": "spa_r09",
+    "name": "Santa Biblia — Reina Valera 1909",
+    "website": "https://ebible.org/Scriptures/details.php?id=spaRV1909",
+    "licenseUrl": "https://ebible.org/Scriptures/details.php?id=spaRV1909",
+    "shortName": "R09",
+    "englishName": "Reina Valera 1909",
+    "language": "spa",
+    "textDirection": "ltr",
+    "sha256": "94e154b2e6e56eda1702d9e9f664357a5f2aa82634b551111b0b698d124e97d5",
+    "availableFormats": [
+      "json"
+    ],
+    "listOfBooksApiLink": "/api/spa_r09/books.json",
+    "completeTranslationApiLink": "/api/spa_r09/complete.json",
+    "simpleCompleteTranslationApiLink": "/api/spa_r09/complete.simple.json",
+    "numberOfBooks": 66,
+    "totalNumberOfChapters": 1189,
+    "totalNumberOfVerses": 31102,
+    "languageName": "español",
+    "languageEnglishName": "Spanish"
+  },
+  "books": [
+    {
+      "id": "GEN",
+      "translationId": "spa_r09",
+      "name": "Génesis",
+      "commonName": "Génesis",
+      "title": "Génesis",
+      "order": 1,
+      "numberOfChapters": 50,
+      "sha256": "50aad366050b7562f76e865ca1ea68290e1538ee57267abcf92eb92a6d6b5fb6",
+      "firstChapterNumber": 1,
+      "firstChapterApiLink": "/api/spa_r09/GEN/1.json",
+      "firstChapterReference": {
+        "translationId": "spa_r09",
+        "book": "GEN",
+        "chapter": 1
+      },
+      "lastChapterNumber": 50,
+      "lastChapterApiLink": "/api/spa_r09/GEN/50.json",
+      "lastChapterReference": {
+        "translationId": "spa_r09",
+        "book": "GEN",
+        "chapter": 50
+      },
+      "totalNumberOfVerses": 1533
+    },
+    {
+      "id": "EXO",
+      "translationId": "spa_r09",
+      "name": "Éxodo",
+      "commonName": "Éxodo",
+      "title": "Éxodo",
+      "order": 2,
+      "numberOfChapters": 40,
+      "sha256": "ba3da1ab73c9b3b44e7705a6216679a7d1fbbdc362771aa1a010a4a6da256692",
+      "firstChapterNumber": 1,
+      "firstChapterApiLink": "/api/spa_r09/EXO/1.json",
+      "firstChapterReference": {
+        "translationId": "spa_r09",
+        "book": "EXO",
+        "chapter": 1
+      },
+      "lastChapterNumber": 40,
+      "lastChapterApiLink": "/api/spa_r09/EXO/40.json",
+      "lastChapterReference": {
+        "translationId": "spa_r09",
+        "book": "EXO",
+        "chapter": 40
+      },
+      "totalNumberOfVerses": 1213
+    },
+    {
+      "id": "MAT",
+      "translationId": "spa_r09",
+      "name": "San Mateo",
+      "commonName": "San Mateo",
+      "title": "San Mateo",
+      "order": 40,
+      "numberOfChapters": 28,
+      "sha256": "3a9937796c621e7ab98845b79ec10cc9c615cdb1dc00623c2ebd9e23694ef467",
+      "firstChapterNumber": 1,
+      "firstChapterApiLink": "/api/spa_r09/MAT/1.json",
+      "firstChapterReference": {
+        "translationId": "spa_r09",
+        "book": "MAT",
+        "chapter": 1
+      },
+      "lastChapterNumber": 28,
+      "lastChapterApiLink": "/api/spa_r09/MAT/28.json",
+      "lastChapterReference": {
+        "translationId": "spa_r09",
+        "book": "MAT",
+        "chapter": 28
+      },
+      "totalNumberOfVerses": 1071
+    }
+  ]
+}

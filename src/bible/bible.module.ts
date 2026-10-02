@@ -4,7 +4,7 @@ import { TranslationsService } from './services/translations.service';
 import { BibleApiModule } from '../bible-api/bible-api.module';
 import { BooksController } from './controllers/books.controller';
 import { BooksService } from './services/books.service';
-import { ChaptersController } from './controller/chapters.controller';
+import { ChaptersController } from './controllers/chapters.controller';
 import { ChaptersService } from './services/chapters.service';
 
 @Module({
