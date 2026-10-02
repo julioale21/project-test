@@ -59,9 +59,7 @@ describe('TranslationsService', () => {
       expect(bibleApi.getTranslations).not.toHaveBeenCalled();
     });
 
-    // TODO: findAll throws a plain Error, which Nest turns into a 500.
-    // Remove `.skip` once it throws BadRequestException.
-    it.skip('rejects an unsupported language with a 400', async () => {
+    it('rejects an unsupported language with a 400', async () => {
       await expect(service.findAll('eng')).rejects.toBeInstanceOf(
         BadRequestException,
       );
@@ -85,17 +83,13 @@ describe('TranslationsService', () => {
       );
     });
 
-    // TODO: findOne throws a plain Error, which Nest turns into a 500.
-    // Remove `.skip` once it throws NotFoundException.
-    it.skip('rejects an unknown id with a 404', async () => {
+    it('rejects an unknown id with a 404', async () => {
       await expect(service.findOne('spa_xyz')).rejects.toBeInstanceOf(
         NotFoundException,
       );
     });
 
-    // TODO: findOne does not check the language yet, so BSB (English) is returned.
-    // Remove `.skip` once unsupported languages are rejected.
-    it.skip('rejects a translation in an unsupported language', async () => {
+    it('rejects a translation in an unsupported language', async () => {
       await expect(service.findOne('BSB')).rejects.toBeInstanceOf(
         NotFoundException,
       );

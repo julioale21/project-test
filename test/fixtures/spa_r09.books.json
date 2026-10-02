@@ -9,9 +9,7 @@
     "language": "spa",
     "textDirection": "ltr",
     "sha256": "94e154b2e6e56eda1702d9e9f664357a5f2aa82634b551111b0b698d124e97d5",
-    "availableFormats": [
-      "json"
-    ],
+    "availableFormats": ["json"],
     "listOfBooksApiLink": "/api/spa_r09/books.json",
     "completeTranslationApiLink": "/api/spa_r09/complete.json",
     "simpleCompleteTranslationApiLink": "/api/spa_r09/complete.simple.json",

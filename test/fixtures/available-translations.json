@@ -10,9 +10,7 @@
       "language": "eng",
       "textDirection": "ltr",
       "sha256": "6cc5238e442b4204b0f617cc5c932bc04f3bae4a0658e6393b0e319653ebe37f",
-      "availableFormats": [
-        "json"
-      ],
+      "availableFormats": ["json"],
       "listOfBooksApiLink": "/api/BSB/books.json",
       "completeTranslationApiLink": "/api/BSB/complete.json",
       "simpleCompleteTranslationApiLink": "/api/BSB/complete.simple.json",
@@ -32,9 +30,7 @@
       "language": "spa",
       "textDirection": "ltr",
       "sha256": "2d4ef9e30afcdb5916f853bda683685eee7c4ff114e3638a680ce201e1904fb2",
-      "availableFormats": [
-        "json"
-      ],
+      "availableFormats": ["json"],
       "listOfBooksApiLink": "/api/spa_pdt/books.json",
       "completeTranslationApiLink": "/api/spa_pdt/complete.json",
       "simpleCompleteTranslationApiLink": "/api/spa_pdt/complete.simple.json",
@@ -54,9 +50,7 @@
       "language": "spa",
       "textDirection": "ltr",
       "sha256": "94e154b2e6e56eda1702d9e9f664357a5f2aa82634b551111b0b698d124e97d5",
-      "availableFormats": [
-        "json"
-      ],
+      "availableFormats": ["json"],
       "listOfBooksApiLink": "/api/spa_r09/books.json",
       "completeTranslationApiLink": "/api/spa_r09/complete.json",
       "simpleCompleteTranslationApiLink": "/api/spa_r09/complete.simple.json",

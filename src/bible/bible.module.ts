@@ -8,8 +8,8 @@ import { ChaptersController } from './controllers/chapters.controller';
 import { ChaptersService } from './services/chapters.service';
 
 @Module({
-    imports: [BibleApiModule],
-    controllers: [TranslationsController, BooksController, ChaptersController],
-    providers: [TranslationsService, BooksService, ChaptersService],
+  imports: [BibleApiModule],
+  controllers: [TranslationsController, BooksController, ChaptersController],
+  providers: [TranslationsService, BooksService, ChaptersService],
 })
 export class BibleModule {}

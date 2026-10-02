@@ -72,8 +72,7 @@ describe('Bible API (e2e)', () => {
         .expect(400);
     });
 
-    // TODO: the service throws a plain Error, so this is a 500 today.
-    it.skip('rejects an unsupported language with a 400', () => {
+    it('rejects an unsupported language with a 400', () => {
       return request(app.getHttpServer())
         .get('/api/v1/translations?lang=eng')
         .expect(400);
@@ -95,8 +94,7 @@ describe('Bible API (e2e)', () => {
         .expect(400);
     });
 
-    // TODO: the service throws a plain Error, so this is a 500 today.
-    it.skip('returns 404 for an unknown id', () => {
+    it('returns 404 for an unknown id', () => {
       return request(app.getHttpServer())
         .get('/api/v1/translations/spa_xyz')
         .expect(404);
@@ -153,9 +151,7 @@ describe('Bible API (e2e)', () => {
         .expect(404);
     });
 
-    // TODO: the chapter param has no ParseIntPipe yet, so it reaches the
-    // client as the string "1" and "abc" is not rejected.
-    it.skip('passes the chapter to the client as a number', async () => {
+    it('passes the chapter to the client as a number', async () => {
       await request(app.getHttpServer())
         .get('/api/v1/translations/spa_r09/books/GEN/chapters/1')
         .expect(200);
@@ -163,14 +159,13 @@ describe('Bible API (e2e)', () => {
       expect(bibleApi.getChapter).toHaveBeenCalledWith('spa_r09', 'GEN', 1);
     });
 
-    it.skip('rejects a non-numeric chapter with a 400', () => {
+    it('rejects a non-numeric chapter with a 400', () => {
       return request(app.getHttpServer())
         .get('/api/v1/translations/spa_r09/books/GEN/chapters/abc')
         .expect(400);
     });
 
-    // TODO: needs a ParseBookIdPipe that upper-cases and validates the id.
-    it.skip('accepts a lower-case book id', async () => {
+    it('accepts a lower-case book id', async () => {
       await request(app.getHttpServer())
         .get('/api/v1/translations/spa_r09/books/gen/chapters/1')
         .expect(200);
