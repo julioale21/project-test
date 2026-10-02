@@ -107,12 +107,13 @@ describe('Bible API (e2e)', () => {
         .get('/api/v1/translations/spa_r09/books')
         .expect(200);
 
-      expect(body.books.map((b: { id: string }) => b.id)).toEqual([
+      expect(body.map((b: { id: string }) => b.id)).toEqual([
         'GEN',
         'EXO',
         'MAT',
       ]);
-      expect(bibleApi.getBooks).toHaveBeenCalledWith('spa_r09');
+      expect(body[2]).toMatchObject({ id: 'MAT', testament: 'new' });
+      expect(body[0]).not.toHaveProperty('sha256');
     });
 
     it('returns 404 when the API does not know the translation', () => {
