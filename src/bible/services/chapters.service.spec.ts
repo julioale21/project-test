@@ -3,18 +3,24 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { BibleApiClient } from '../../bible-api/bible-api.client';
 import { spaR09Gen1 } from '../../../test/fixtures';
 import { ChaptersService } from './chapters.service';
+import { TranslationsService } from './translations.service';
 
 describe('ChaptersService', () => {
   let service: ChaptersService;
   const bibleApi = { getChapter: jest.fn() };
+  const translationsService = { isSupported: jest.fn() };
 
   beforeEach(async () => {
-    bibleApi.getChapter.mockReset();
+    jest.resetAllMocks();
+    translationsService.isSupported.mockImplementation(
+      (language: string) => language === 'spa',
+    );
 
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         ChaptersService,
         { provide: BibleApiClient, useValue: bibleApi },
+        { provide: TranslationsService, useValue: translationsService },
       ],
     }).compile();
 
@@ -29,6 +35,16 @@ describe('ChaptersService', () => {
       chapter,
     );
     expect(bibleApi.getChapter).toHaveBeenCalledWith('spa_r09', 'GEN', 1);
+  });
+
+  it('rejects a chapter from an unsupported language with a 404', async () => {
+    const chapter = spaR09Gen1();
+    chapter.translation.language = 'eng';
+    bibleApi.getChapter.mockResolvedValue(chapter);
+
+    await expect(service.getChapter('BSB', 'GEN', 1)).rejects.toBeInstanceOf(
+      NotFoundException,
+    );
   });
 
   it('propagates a 404 from the API client', async () => {

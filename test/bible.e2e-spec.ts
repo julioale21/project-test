@@ -128,6 +128,16 @@ describe('Bible API (e2e)', () => {
         .get('/api/v1/translations/spa%20r09/books')
         .expect(400);
     });
+
+    it('returns 404 for a translation in an unsupported language', () => {
+      const books = spaR09Books();
+      books.translation.language = 'eng';
+      bibleApi.getBooks.mockResolvedValue(books);
+
+      return request(app.getHttpServer())
+        .get('/api/v1/translations/BSB/books')
+        .expect(404);
+    });
   });
 
   describe('GET /api/v1/translations/:translationId/books/:bookId/chapters/:chapter', () => {
@@ -148,6 +158,16 @@ describe('Bible API (e2e)', () => {
 
       return request(app.getHttpServer())
         .get('/api/v1/translations/spa_r09/books/GEN/chapters/99')
+        .expect(404);
+    });
+
+    it('returns 404 for a chapter from an unsupported language', () => {
+      const chapter = spaR09Gen1();
+      chapter.translation.language = 'eng';
+      bibleApi.getChapter.mockResolvedValue(chapter);
+
+      return request(app.getHttpServer())
+        .get('/api/v1/translations/BSB/books/GEN/chapters/1')
         .expect(404);
     });
 
