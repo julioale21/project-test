@@ -1,7 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { BibleApiClient } from '../../bible-api/bible-api.client';
-import type { ApiTranslationBooks } from 'free-use-bible-api';
 import { TranslationsService } from './translations.service';
+import { BookDto } from '../dto/book.dto';
+import { toBookDto } from '../mapper/book.mapper';
 
 @Injectable()
 export class BooksService {
@@ -10,7 +11,7 @@ export class BooksService {
     private readonly translationsService: TranslationsService,
   ) {}
 
-  async getBooks(translationId: string): Promise<ApiTranslationBooks> {
+  async getBooks(translationId: string): Promise<BookDto[]> {
     const response = await this.bibleApi.getBooks(translationId);
 
     // The response already includes the translation, so no extra API call
@@ -21,6 +22,6 @@ export class BooksService {
       );
     }
 
-    return response;
+    return response.books.map(toBookDto);
   }
 }

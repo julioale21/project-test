@@ -1,7 +1,7 @@
+import { BookDto } from './../dto/book.dto';
 import { Controller, Get, Param } from '@nestjs/common';
 import { BooksService } from '../services/books.service';
 import { ParseTranslationIdPipe } from '../pipes/parse-translation-id.pipe';
-import type { ApiTranslationBooks } from 'free-use-bible-api';
 
 @Controller('translations/:translationId/books')
 export class BooksController {
@@ -10,7 +10,7 @@ export class BooksController {
   @Get()
   async findAll(
     @Param('translationId', ParseTranslationIdPipe) translationId: string,
-  ): Promise<ApiTranslationBooks> {
+  ): Promise<BookDto[]> {
     return this.booksService.getBooks(translationId);
   }
 }
