@@ -27,11 +27,19 @@ describe('BooksService', () => {
     service = module.get(BooksService);
   });
 
-  it('asks the API for the books of the given translation', async () => {
-    const books = spaR09Books();
-    bibleApi.getBooks.mockResolvedValue(books);
+  it('returns the books mapped to DTOs', async () => {
+    bibleApi.getBooks.mockResolvedValue(spaR09Books());
 
-    await expect(service.getBooks('spa_r09')).resolves.toEqual(books);
+    const results = await service.getBooks('spa_r09');
+
+    expect(results.map((book) => book.id)).toEqual(['GEN', 'EXO', 'MAT']);
+    expect((results[0])).toEqual({
+      id: 'GEN',
+      name: 'Génesis',
+      order: 1,
+      chapters: 50,
+      testament: 'old',
+    });
     expect(bibleApi.getBooks).toHaveBeenCalledWith('spa_r09');
   });
 
