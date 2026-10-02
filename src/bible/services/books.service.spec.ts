@@ -33,7 +33,7 @@ describe('BooksService', () => {
     const results = await service.getBooks('spa_r09');
 
     expect(results.map((book) => book.id)).toEqual(['GEN', 'EXO', 'MAT']);
-    expect((results[0])).toEqual({
+    expect(results[0]).toEqual({
       id: 'GEN',
       name: 'Génesis',
       order: 1,
@@ -59,6 +59,21 @@ describe('BooksService', () => {
     await expect(service.getBooks('BSB')).rejects.toBeInstanceOf(
       NotFoundException,
     );
+  });
+
+  it('leaves out deuterocanonical books', async () => {
+    const books = spaR09Books();
+    books.books.push({
+      ...books.books[0],
+      id: 'TOB',
+      order: 67,
+      isApocryphal: true,
+    });
+    bibleApi.getBooks.mockResolvedValue(books);
+
+    const results = await service.getBooks('spa_r09');
+
+    expect(results.map((book) => book.id)).not.toContain('TOB');
   });
 
   it('propagates a 404 from the API client', async () => {
